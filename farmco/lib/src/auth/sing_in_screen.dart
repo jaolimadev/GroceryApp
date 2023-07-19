@@ -3,12 +3,13 @@ import 'package:farmco/src/auth/components/custom_text_field.dart';
 import 'package:farmco/src/config/custom_colors.dart';
 import 'package:flutter/material.dart';
 
+import 'components/sing_up_screen.dart';
+
 class SingInScreen extends StatelessWidget {
   const SingInScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
@@ -23,14 +24,14 @@ class SingInScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-              // LOGO
+// LOGO
                     const Icon(
                       Icons.eco,
                       size: 70,
                       color: Colors.white,
                     ),
-              
-              // NOME DO APP
+
+// NOME DO APP
                     const Text.rich(
                       TextSpan(
                         style: TextStyle(
@@ -51,17 +52,17 @@ class SingInScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-              
-              //CATEGORIAS
+
+//CATEGORIAS
                     SizedBox(
-                      height: 15,
+                      height: 18,
                       child: DefaultTextStyle(
                         style: const TextStyle(
                           fontSize: 15,
                           color: Color.fromARGB(149, 255, 255, 255),
                         ),
                         child: AnimatedTextKit(
-                          pause: const Duration(milliseconds:0),
+                          pause: const Duration(milliseconds: 0),
                           repeatForever: true,
                           animatedTexts: [
                             FadeAnimatedText('Agricultura'),
@@ -78,8 +79,8 @@ class SingInScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              
-              // FORMULÁRIO
+
+// FORMULÁRIO
               Container(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 20,
@@ -94,20 +95,20 @@ class SingInScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-              // EMAIL
+                    // EMAIL
                     const CustomTextField(
                       icon: Icons.email,
                       label: 'Email',
                     ),
-              
-              // SENHA
+
+                    // SENHA
                     const CustomTextField(
                       icon: Icons.lock,
                       label: 'Senha',
                       isSecret: true,
                     ),
-              
-              // BOTÃO ENTRAR
+
+// BOTÃO ENTRAR
                     SizedBox(
                       height: 50,
                       child: ElevatedButton(
@@ -121,12 +122,13 @@ class SingInScreen extends StatelessWidget {
                           'Entrar',
                           style: TextStyle(
                             fontSize: 20,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                     ),
-              
-              // ESQUECEU A SENHA
+
+// ESQUECEU A SENHA
                     Align(
                       alignment: Alignment.centerRight,
                       child: TextButton(
@@ -139,8 +141,8 @@ class SingInScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-              
-              // DIVISOR
+
+                    // DIVISOR
                     const Padding(
                       padding: EdgeInsets.only(bottom: 10),
                       child: Row(
@@ -169,8 +171,8 @@ class SingInScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-              
-              // BOTÃO CRIAR CONTA
+
+// BOTÃO CRIAR CONTA
                     SizedBox(
                       height: 50,
                       child: OutlinedButton(
@@ -183,7 +185,15 @@ class SingInScreen extends StatelessWidget {
                             color: Colors.green,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (c) {
+                                return SingUpScreen();
+                              },
+                            ),
+                          );
+                        },
                         child: const Text(
                           'Criar conta',
                           style: TextStyle(
