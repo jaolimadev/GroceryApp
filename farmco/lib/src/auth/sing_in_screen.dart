@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:farmco/src/auth/components/custom_text_field.dart';
+import 'package:farmco/src/base/base_screen.dart';
 import 'package:farmco/src/config/custom_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -117,7 +118,15 @@ class SingInScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (c) {
+                                return BaseScreen();
+                              },
+                            ),
+                          );
+                        },
                         child: const Text(
                           'Entrar',
                           style: TextStyle(
