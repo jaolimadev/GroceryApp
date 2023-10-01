@@ -122,7 +122,7 @@ class SingInScreen extends StatelessWidget {
                           Navigator.of(context).pushReplacement(
                             MaterialPageRoute(
                               builder: (c) {
-                                return BaseScreen();
+                                return const BaseScreen();
                               },
                             ),
                           );

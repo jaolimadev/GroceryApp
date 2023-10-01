@@ -1,6 +1,8 @@
 import 'package:farmco/src/config/custom_colors.dart';
 import 'package:flutter/material.dart';
 
+import '../home/home_tab.dart';
+
 class BaseScreen extends StatefulWidget {
   const BaseScreen({super.key});
 
@@ -19,7 +21,7 @@ class _BaseScreenState extends State<BaseScreen> {
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         children: [
-          Container(),
+          const HomeTab(),
           Container(),
           Container(),
           Container(),
