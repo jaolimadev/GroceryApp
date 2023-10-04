@@ -36,14 +36,9 @@ class HomeTab extends StatelessWidget {
         ),
         actions: [
           badges.Badge(
-            position: badges.BadgePosition.topEnd(top: 10, end: 50),
+            position: badges.BadgePosition.topEnd(top: 20, end: 50),
             showBadge: true,
-            onTap: () {},
-            badgeContent: Icon(
-              Icons.shopping_cart,
-              color: CustomColors.customSwatchColor,
-              size: 25,
-            ),
+            badgeContent: null,
             badgeAnimation: const badges.BadgeAnimation.slide(
               animationDuration: Duration(milliseconds: 500),
               colorChangeAnimationDuration: Duration(seconds: 1),
@@ -54,15 +49,48 @@ class HomeTab extends StatelessWidget {
             badgeStyle: const badges.BadgeStyle(
               padding: EdgeInsets.all(5),
             ),
+            child: IconButton(
+              icon: Icon(Icons.shopping_cart,
+                  color: CustomColors.customSwatchColor),
+              onPressed: () {},
+            ),
           ),
         ],
       ),
 
-//CAMPO DE PESQUISA
+      body: Column(
+        children: [
+          //CAMPO DE PESQUISA
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 20,
+              vertical: 10,
+            ),
+            child: TextFormField(
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.white,
+                isDense: true,
+                hintText: 'Pesquisar produtos...',
+                hintStyle: TextStyle(color: Colors.grey[400], fontSize: 14),
+                prefixIcon: Icon(
+                  Icons.search,
+                  color: CustomColors.customContrastColor,
+                  size: 21,
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(60),
+                  borderSide: BorderSide.none,
+                ),
+              ),
+            ),
+          ),
+        ],
 
 //CATEGORIAS
 
 //GRID DE PRODUTOS
+      ),
     );
   }
 }
