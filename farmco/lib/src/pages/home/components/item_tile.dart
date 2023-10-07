@@ -1,14 +1,16 @@
 import 'package:farmco/src/config/custom_colors.dart';
 import 'package:farmco/src/models/item_model.dart';
+import 'package:farmco/src/services/utils_services.dart';
 import 'package:flutter/material.dart';
 
 class ItemTile extends StatelessWidget {
-  const ItemTile({
+  ItemTile({
     super.key,
     required this.item,
   });
 
   final ItemModel item;
+  final UtilServices utilServices = UtilServices();
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +40,7 @@ class ItemTile extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  item.price.toString(),
+                  utilServices.priceToCurency(item.price),
                   style:  TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,

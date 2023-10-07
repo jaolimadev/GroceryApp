@@ -56,23 +56,22 @@ ItemModel papaya = ItemModel(
 
 // Lista de produtos
 List<ItemModel> items = [
-  apple,
   grape,
-  guava,
-  kiwi,
-  mango,
+  apple,
   papaya,
+  guava,
+  mango,
+  kiwi,
 ];
 
-
 List<String> categories = [
-    'Frutas',
-    'Legumes',
-    'Verduras',
-    'Carnes',
-    'Laticínios',
-    'Bebidas',
-    'Limpeza',
-    'Higiene',
-    'Outros',
-  ];
+  'Frutas',
+  'Legumes',
+  'Verduras',
+  'Carnes',
+  'Laticínios',
+  'Bebidas',
+  'Limpeza',
+  'Higiene',
+  'Outros',
+];
