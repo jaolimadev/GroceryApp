@@ -1,10 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:farmco/src/pages/auth/components/custom_text_field.dart';
+import 'package:farmco/src/pages/home/components/custom_text_field.dart';
 import 'package:farmco/src/pages/base/base_screen.dart';
 import 'package:farmco/src/config/custom_colors.dart';
 import 'package:flutter/material.dart';
 
-import 'components/sing_up_screen.dart';
+import '../home/components/sing_up_screen.dart';
 
 class SingInScreen extends StatelessWidget {
   const SingInScreen({super.key});

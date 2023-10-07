@@ -1,7 +1,7 @@
 import 'package:farmco/src/models/item_model.dart';
 
 ItemModel apple = ItemModel(
-  imgUrl: 'farmco/assets/fruits/apple.png',
+  imgUrl: '/Users/jao/Developer/Farm.co/farmco/assets/fruits/apple.png',
   itemName: 'Maçã',
   price: 5.5,
   unit: 'kg',
@@ -10,7 +10,7 @@ ItemModel apple = ItemModel(
 );
 
 ItemModel grape = ItemModel(
-  imgUrl: 'afarmco/assets/fruits/grape.png',
+  imgUrl: '/Users/jao/Developer/Farm.co/farmco/assets/fruits/grape.png',
   itemName: 'Uva',
   price: 7.4,
   unit: 'kg',
@@ -19,7 +19,7 @@ ItemModel grape = ItemModel(
 );
 
 ItemModel guava = ItemModel(
-  imgUrl: 'farmco/assets/fruits/guava.png',
+  imgUrl: '/Users/jao/Developer/Farm.co/farmco/assets/fruits/guava.png',
   itemName: 'Goiaba',
   price: 11.5,
   unit: 'kg',
@@ -28,7 +28,7 @@ ItemModel guava = ItemModel(
 );
 
 ItemModel kiwi = ItemModel(
-  imgUrl: 'farmco/assets/fruits/kiwi.png',
+  imgUrl: '/Users/jao/Developer/Farm.co/farmco/assets/fruits/kiwi.png',
   itemName: 'Kiwi',
   price: 2.5,
   unit: 'un',
@@ -37,7 +37,7 @@ ItemModel kiwi = ItemModel(
 );
 
 ItemModel mango = ItemModel(
-  imgUrl: 'farmco/assets/fruits/mango.png',
+  imgUrl: '/Users/jao/Developer/Farm.co/farmco/assets/fruits/mango.png',
   itemName: 'Manga',
   price: 2.5,
   unit: 'un',
@@ -46,7 +46,7 @@ ItemModel mango = ItemModel(
 );
 
 ItemModel papaya = ItemModel(
-  imgUrl: 'farmco/assets/fruits/papaya.png',
+  imgUrl: '/Users/jao/Developer/Farm.co/farmco/assets/fruits/papaya.png',
   itemName: 'Mamão papaya',
   price: 8,
   unit: 'kg',

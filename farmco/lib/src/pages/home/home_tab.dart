@@ -1,9 +1,9 @@
-import 'package:farmco/src/pages/auth/components/category_tile.dart';
+import 'package:farmco/src/pages/home/components/category_tile.dart';
 import 'package:farmco/src/config/custom_colors.dart';
+import 'package:farmco/src/pages/home/components/item_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:farmco/src/models/app_data.dart' as app_data;
-
 
 class HomeTab extends StatefulWidget {
   const HomeTab({Key? key}) : super(key: key);
@@ -13,7 +13,6 @@ class HomeTab extends StatefulWidget {
 }
 
 class _HomeTabState extends State<HomeTab> {
-  
   String selectedCategory = 'Frutas';
 
   @override
@@ -69,9 +68,9 @@ class _HomeTabState extends State<HomeTab> {
         ],
       ),
 
+//CAMPO DE PESQUISA
       body: Column(
         children: [
-          //CAMPO DE PESQUISA
           Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: 20,
@@ -125,6 +124,24 @@ class _HomeTabState extends State<HomeTab> {
           ),
 
 //GRID DE PRODUTOS
+          Expanded(
+            child: GridView.builder(
+              padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
+              physics: const BouncingScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                childAspectRatio: 9 / 11.5,
+              ),
+              itemCount: app_data.items.length,
+              itemBuilder: (_, index) {
+                return ItemTile(
+                  item: app_data.items[index],
+                );
+              },
+            ),
+          )
         ],
       ),
     );
