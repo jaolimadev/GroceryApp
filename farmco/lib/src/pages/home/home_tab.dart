@@ -1,4 +1,4 @@
-import 'package:farmco/src/auth/components/category_tile.dart';
+import 'package:farmco/src/pages/auth/components/category_tile.dart';
 import 'package:farmco/src/config/custom_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;

@@ -1,4 +1,4 @@
-import 'package:farmco/src/auth/sing_in_screen.dart';
+import 'package:farmco/src/pages/auth/sing_in_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

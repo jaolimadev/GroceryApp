@@ -1,4 +1,4 @@
-import 'package:farmco/src/auth/components/custom_text_field.dart';
+import 'package:farmco/src/pages/auth/components/custom_text_field.dart';
 import 'package:farmco/src/config/custom_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';

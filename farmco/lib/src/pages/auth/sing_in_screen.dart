@@ -1,6 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:farmco/src/auth/components/custom_text_field.dart';
-import 'package:farmco/src/base/base_screen.dart';
+import 'package:farmco/src/pages/auth/components/custom_text_field.dart';
+import 'package:farmco/src/pages/base/base_screen.dart';
 import 'package:farmco/src/config/custom_colors.dart';
 import 'package:flutter/material.dart';
 
