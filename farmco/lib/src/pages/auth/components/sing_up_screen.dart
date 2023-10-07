@@ -85,6 +85,7 @@ class SingUpScreen extends StatelessWidget {
                           height: 50,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
+                              backgroundColor: CustomColors.customSwatchColor,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),
@@ -93,6 +94,7 @@ class SingUpScreen extends StatelessWidget {
                             child: const Text(
                               'Criar Conta',
                               style: TextStyle(
+                                color: Colors.white,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
                               ),

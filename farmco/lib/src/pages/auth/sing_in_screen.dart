@@ -45,7 +45,7 @@ class SingInScreen extends StatelessWidget {
                             text: 'Farm.',
                           ),
                           TextSpan(
-                            text: 'CO2',
+                            text: 'Table',
                             style: TextStyle(
                               color: Color.fromARGB(149, 255, 255, 255),
                             ),
@@ -114,6 +114,7 @@ class SingInScreen extends StatelessWidget {
                       height: 50,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
+                          backgroundColor: CustomColors.customSwatchColor,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),
                           ),
@@ -130,6 +131,7 @@ class SingInScreen extends StatelessWidget {
                         child: const Text(
                           'Entrar',
                           style: TextStyle(
+                            color: Colors.white,
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
@@ -203,9 +205,12 @@ class SingInScreen extends StatelessWidget {
                             ),
                           );
                         },
-                        child: const Text(
+                        child: Text(
                           'Criar conta',
                           style: TextStyle(
+                            color: CustomColors.customSwatchColor,
+                            fontWeight: FontWeight.bold,
+                            
                             fontSize: 20,
                           ),
                         ),
