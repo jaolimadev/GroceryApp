@@ -17,14 +17,12 @@ class ItemTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-
-        //CONTEUDO  
+        //CONTEUDO
         GestureDetector(
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (c){
-              return ProductScreen( item : item);
+            Navigator.of(context).push(MaterialPageRoute(builder: (c) {
+              return ProductScreen(item: item);
             }));
-
           },
           child: Card(
             elevation: 3,
@@ -36,9 +34,12 @@ class ItemTile extends StatelessWidget {
                 children: [
                   //IMAGEM
                   Expanded(
-                    child: Image.asset(item.imgUrl),
+                    child: Hero(
+                      tag: item.imgUrl,
+                      child: Image.asset(item.imgUrl),
+                    ),
                   ),
-        
+
                   //NOME
                   Text(
                     item.itemName,
@@ -47,7 +48,7 @@ class ItemTile extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-        
+
                   //PREÇO - UNIDADE DE MEDIDA
                   Row(
                     children: [
