@@ -1,3 +1,4 @@
+import 'package:farmco/src/config/custom_colors.dart';
 import 'package:farmco/src/pages/auth/sing_in_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Farm.Table',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: CustomColors.customSwatchColor,
         scaffoldBackgroundColor: Colors.white.withAlpha(190),
         iconTheme: const IconThemeData(color: Colors.green),
         useMaterial3: true,

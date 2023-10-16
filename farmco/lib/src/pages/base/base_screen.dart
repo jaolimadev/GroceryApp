@@ -1,4 +1,5 @@
 import 'package:farmco/src/config/custom_colors.dart';
+import 'package:farmco/src/pages/cart/cart_tab.dart';
 import 'package:flutter/material.dart';
 
 import '../home/home_tab.dart';
@@ -22,7 +23,7 @@ class _BaseScreenState extends State<BaseScreen> {
         controller: pageController,
         children: [
           const HomeTab(),
-          Container(),
+          CartTab(),
           Container(),
           Container(),
         ],
