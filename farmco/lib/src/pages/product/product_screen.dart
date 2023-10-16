@@ -8,16 +8,18 @@ import 'package:flutter/material.dart';
 class ProductScreen extends StatefulWidget {
   const ProductScreen({
     super.key,
-    required this.item,
+   required this.item,
   });
 
   final ItemModel item;
+
 
   @override
   State<ProductScreen> createState() => _ProductScreenState();
 }
 
 class _ProductScreenState extends State<ProductScreen> {
+
   final UtilServices utilServices = UtilServices();
 
   int cartItemQuantity = 1;
@@ -73,8 +75,8 @@ class _ProductScreenState extends State<ProductScreen> {
                             ),
                           ),
                           QuantityWidget(
-                            value: 1,
                             suffixText: widget.item.unit,
+                            value: cartItemQuantity,
                             result: (int quantity) {
                               setState(() {
                                 cartItemQuantity = quantity;

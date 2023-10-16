@@ -9,7 +9,7 @@ class QuantityWidget extends StatelessWidget {
   const QuantityWidget({
     super.key,
     required this.value,
-    required this.suffixText,
+    required this.suffixText,  
     required this.result,
   });
 
@@ -18,8 +18,8 @@ class QuantityWidget extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(50),
         color: Colors.white,
+        borderRadius: BorderRadius.circular(50),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.shade300,
@@ -35,8 +35,8 @@ class QuantityWidget extends StatelessWidget {
             color: Colors.grey,
             onPressed: () {
               if (value == 1) return;
-               int resultCount = value - 1;
-              result(resultCount); 
+              int resultCount = value - 1;
+              result(resultCount);
             },
           ),
           Padding(
@@ -54,7 +54,7 @@ class QuantityWidget extends StatelessWidget {
             color: CustomColors.customSwatchColor,
             onPressed: () {
               int resultCount = value + 1;
-              result(resultCount); 
+              result(resultCount);
             },
           ),
         ],
@@ -78,15 +78,14 @@ class _QuantityButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: InkWell(
-        onTap: () {},
+        borderRadius: BorderRadius.circular(50),
+        onTap: onPressed,
         child: Ink(
           height: 25,
           width: 25,
-          
-          
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(50),
-            color: color,
+            borderRadius: BorderRadius.circular(12.5),
+            color: color, 
           ),
           child: Icon(
             icon,
